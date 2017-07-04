@@ -1,0 +1,194 @@
+<p class="normal">This paragraph is normal.</p>
+<p class="italic">This paragraph is italic.</p>
+<p class="oblique">This paragraph is oblique.</p>
+
+
+<!--The text-decoration property specifies how the text will be decorated.
+Commonly used values are:
+inherit - Inherits this property from its parent element-->
+
+<style>
+
+p.normal {
+    font-style: normal;
+}
+p.italic {
+    font-style: italic;
+}
+p.oblique {
+    font-style: oblique;
+}
+</style>
+
+
+
+<p class="light">This is a font with a "lighter" weight.</p>
+<p class="thinner">This is a font with a "200" weight.</p>
+<p>This is a font with a normal weight.</p>
+<p class="bold">This is a font with a "bold" weight.</p>
+<p class="bolder">This is a font with a "bolder" weight.</p>
+<p class="thicker">This is a font with a "700" weight.</p>
+
+<!--The HTML <strong> tag also makes the text bold.-->
+
+<style>
+
+p.light {
+    font-weight: lighter;
+}
+p.thinner {
+  font-weight: 200;
+}
+p.bold {
+    font-weight: bold;
+}
+p.bolder {
+    font-weight: bolder;
+}
+p.thicker {
+   font-weight: 700;
+}
+</style>
+
+
+<p class="normal">Paragraph font variant set to normal.</p>
+<p class="small">Paragraph font variant set to small-caps.</p>
+
+<style>
+
+p.normal {
+   font-variant: normal;
+}
+p.small {
+   font-variant: small-caps;
+}
+</style>
+
+
+<p class="example">The text inside the paragraph is green.</p>
+The text outside the paragraph is black (by default).
+
+<h1>This is a heading</h1>
+<p class="example2">This is a paragraph</p>
+
+<style>
+
+p.example {
+   color: green;
+}
+h1 {
+   color: #0000FF;
+}
+p.example2 {
+   color: rgb(255,0,0);
+}
+
+</style>
+
+
+<p class="left">This paragraph is aligned to <strong>left.</strong></p>
+<p class="right">This paragraph is aligned to <strong>right.</strong></p>
+<p class="center">This paragraph is aligned to <strong>center.</strong></p>
+
+
+<style>
+
+p.left {
+   text-align: left;
+}
+p.right {
+   text-align: right;
+}
+p.center {
+   text-align: center;
+}
+</style>
+
+
+<p>This is an <span class="baseline">inline text</span> example.</p>
+<p>This is a <span class="sub">sub line text</span> example.</p>
+<p> This is a <span class="super">super line text</span> example.</p>
+<p> This is a <span class="pixel">pixel</span> example.</p>
+<!--Instead of px values, you can use pt (points), cm (centimeters) and % (percentage) values.-->
+
+<!--Vertical align property does not act the same way other elements like divs.
+some additional CSS styling is needed for div elements.-->
+
+
+<style>
+
+span.baseline {
+    vertical-align: baseline;
+}
+span.sub {
+    vertical-align: sub;
+}
+span.super {
+    vertical-align: super;
+}
+span.pixel {
+    vertical-align: -10px;
+}
+
+
+</style>
+
+
+<p class="none">This is default style of the text (none).</p>
+<p class="inherit">This text inherits the decoration of the parent.</p>
+<p class="overline">This is overlined text.</p>
+<p class="underline">This is underlined text.</p>
+<p class="line-through">This is lined-through text.</p>
+<!-- (substitutes the HTML <s> tag) -->
+
+<!-- You can combine the underline, overline, or line-through values in a space-separated list to add multiple decoration lines. -->
+<p class="blink">This text should blink but most browsers ignore this decoration.</p>
+
+<style>
+
+p.none {
+   text-decoration: none;
+}
+p.inherit {
+   text-decoration: inherit;
+}
+p.overline {
+   text-decoration: overline;
+}
+p.underline {
+   text-decoration: underline;
+}
+p.line-through {
+   text-decoration: line-through;
+}
+
+/*Another value of text-decoration property is blink which makes the text blink.
+
+CSS syntax looks like this:*/
+p.blink {
+text-decoration: blink;
+}
+
+/*This value is valid but is deprecated and most browsers ignore it.*/
+
+</style>
+
+
+<p class="indent">This is an example of
+<strong>text-indent </strong> property.
+First line of our text is indented to the right in 60px.
+Besides pixels you can also use other measurement units,
+like pt, cm, em, etc. </p>
+
+<style>
+
+p.indent {
+   text-indent: 60px;
+}
+
+</style>
+
+
+
+<style>
+</style>
