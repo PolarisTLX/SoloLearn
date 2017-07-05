@@ -189,6 +189,92 @@ p.indent {
 </style>
 
 
+<h1 class="shadow">Text-shadow example</h1>
+<!-- The text-shadow property adds shadow to text.
+It takes four values in order: x, y, blur and color.
+Example:  text-shadow: 5px 2px 4px grey;-->
+
+<!-- For the x and y offsets, various types of units can be used (like px, cm, mm, in, pc, pt, etc).
+Negative values are also supported.-->
+
+<h1 class="shadow2">This example creates a blue drop-shadow, 2 pixels higher, 1 pixel left, 0.5em blur:</h1>
+<!--The example below creates a blue drop-shadow, two pixels higher than the main text, one pixel to the left of it, and with a 0.5em blur:  -->
+
+<style>
+
+h1.shadow {
+   color: blue;
+   font-size: 30pt;
+   text-shadow: 5px 2px 4px grey;
+}
+h1.shadow2 {
+   font-size: 20pt;
+    text-shadow: rgba(0,0,255,1) -1px -2px 0.5em;
+}
+
+</style>
+
+
+
+<!-- The white-space Property
+The white-space property specifies how white-space inside an element is handled. The values can be set as normal, inherit, nowrap, etc.
+The nowrap value suppresses all line breaks in the element.  -->
+
+<p class="nowrap">
+  This does not work.
+This paragraph has         multiple spaces      and
+a line break, but it will be ignored, as we used the nowrap value.
+</p>
+<p>
+  This does not work. This paragraph has no speceial class, The text will continue on the same line until a &lt /br &gt <br /> tag is encountered.        and multiple spaces      and
+a line break, but it will be ignored, as we used the nowrap value.
+</p>
+
+<!-- show HTML code-snippets on a webpage by replacing each < with  &lt; and > with &gt; -->
+
+<style>
+
+p.nowrap {
+   white-space: nowrap;
+}
+
+</style>
+
+
+
+
+<!-- The white-space property also supports other values:
+pre - text will only wrap on line breaks and white space
+pre-line - text will wrap where there is a break in code, but extra white space is still ignored
+pre-wrap - text will wrap when necessary, and on line breaks -->
+
+<p class="pre">
+THIS WORKS!!! In the markup we have multiple            spaces
+and a line break.
+</p>
+<p class="preline">
+In the markup we have multiple            spaces
+and a line break, but in the result multiple spaces are ignored.
+</p>
+<p class="prewrap">
+In the markup we have              multiple
+spaces and a line break.
+</p>
+
+<style>
+
+p.pre {
+   white-space: pre;
+}
+p.preline {
+   white-space: pre-line;
+}
+p.prewrap {
+   white-space: pre-wrap;
+}
+</style>
+
+
 
 <style>
 </style>
