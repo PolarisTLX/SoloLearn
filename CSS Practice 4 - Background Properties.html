@@ -1,0 +1,68 @@
+<p>The url specifies the path to the image file. Both relative and absolute paths are supported.</p>
+
+<p>By default, a background-image is placed at the top-left corner of an element, and is repeated both vertically and horizontally to cover the entire element.</p>
+<p>By default, a background-image is placed at the top-left corner of an element, and is repeated both vertically and horizontally to cover the entire element.</p>
+<p class="inline">By including  "display: inline; "  in the CSS, the text background color only covers the content.<p>
+<h3>Another way to only <span>cover a portion  is to use  &ltspan&gt  &lt/span&gt </span>, and everything after should not be covered.</h3>
+
+<style>
+
+body {
+   background-image: url("https://www.sololearn.com/images/fb-story-icon.jpg");
+   /*background-repeat: no-repeat;
+   background-repeat: repeat-y;*/
+   background-repeat: repeat-x;
+   background-attachment: fixed;
+   /*background-attachment: scroll;*/  /*this one is unnecessary*/
+   background-color: rgb(166, 144, 168);
+}
+p {
+  font-size: 20px;
+  background-color: rgb(81, 122, 193);
+}
+p.inline {
+  font-size: 20px;
+  background-color: rgb(81, 122, 193);
+  display: inline;
+}
+h3 span {
+  font-size: 20px;
+  background-color: rgb(81, 122, 193);
+}
+
+</style>
+
+</br></br>
+<p class="background">This paragraph has a background image.</p>
+<!-- To specify more than one image, just separate the URLs with commas. -->
+</br></br></br>
+</br></br></br>
+<p class="multiback"> DOES NOT WORK! To specify more than one image, just separate the URLs with commas.<p>
+
+<style>
+p.background {
+   padding: 30px;
+   background-image: url("http://images.all-free-download.com/images/graphicthumb/yellow_field_514405.jpg");
+   background-size: 600px 100px;  /*this is width THEN height???*/
+   background-repeat: no-repeat;
+   display: inline;
+   color: white;
+}
+p.multiback {
+   padding: 30px;
+   background-image: url("https://media0.giphy.com/media/Qh6aPCssL8J8I/200_s.gif"),
+                     url("https://media0.giphy.com/media/BKqOqscntEIrm/200_s.gif"),
+                     url("https://cdn.shopify.com/s/files/1/1352/7763/products/XX-HR0350_grande.jpg?v=1478452972");
+   background-size: 80px 60px;
+   background-repeat: no-repeat;
+   display: inline;
+   color: green;
+}
+</style>
+
+<style>
+</style>
+
+
+<style>
+</style>
