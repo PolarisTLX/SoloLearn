@@ -1,0 +1,86 @@
+<div class="first"></div>
+<div class="second"></div>
+<div class="third"></div>
+<div class="fourth"></div>
+
+<style>
+div.first {
+   /*float: left;*/
+   width: 300px;
+   height: 100px;
+   margin: 4px;
+   color: #FFF;
+   background:linear-gradient(0deg, blue, green, white);
+}
+div.second {
+   /*float: left;*/
+   width: 300px;
+   height: 100px;
+   margin: 4px;
+   background:linear-gradient(100deg, blue, green, white);
+}
+div.third {
+   /*float: left;*/
+   width: 300px;
+   height: 100px;
+   margin: 4px;
+   background:linear-gradient(200deg, blue, green, white);
+}
+div.fourth{
+  width: 300px;
+  height: 100px;
+  margin: 4px;
+  background:repeating-linear-gradient(blue, green 20px);
+}
+</style>
+
+<!--
+Radial gradients are defined by its center.
+
+background: radial-gradient(position, shape or size, color-stops);
+
+The first value defines the gradient position. We can use a descriptive keyword, such as top, bottom, center, or left; or we can specify, for example, 50% 50% to set the gradient at the center or 0% 0% to set the gradient to start at top left.
+
+The second value defines the shape and the gradient size. There are two arguments to shape gradients: The first is the ellipse, which is the default; and the second is the circle.
+Lastly, the third value defines the color combination.
+ -->
+
+ <div class="fifth"></div>
+ <div class="sixth"></div>
+ <div class="seventh"></div>
+ <div class="eith"></div>
+  <div class="ninth"></div>
+
+<style>
+ div.fifth {
+   height: 150px;
+   width: 200px;
+   color: #FFF;
+   background: radial-gradient(green, yellow, blue);
+}
+div.sixth {
+   height: 150px;
+   width: 200px;
+   color: #FFF;
+   background: radial-gradient(circle, green, yellow, blue);
+}
+div.seventh {
+   height: 150px;
+   width: 200px;
+   color: #FFF;
+   background: radial-gradient(10% 40%, green, yellow, blue);
+}
+div.eith {
+   height: 150px;
+   width: 200px;
+   color: #FFF;
+   background: radial-gradient(green 5%, yellow 15%, blue 60%);
+}
+div.ninth {
+   height: 150px;
+   width: 200px;
+   color: #FFF;
+   background: -webkit-radial-gradient(top left, green, yellow, blue);
+   /*DOES NOT WORK WITHOUT THE -webkit- until Chrome updates to include this*/
+}
+</style>

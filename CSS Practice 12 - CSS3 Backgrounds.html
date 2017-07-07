@@ -1,0 +1,77 @@
+<!-- The background-size Values -->
+
+div {
+   height: 150px;
+   width: 200px;
+   border: 1px solid #000;
+   background: url("css_logo.png") no-repeat 50% 50%;
+
+   background-size: 100px 100px;
+   <!-- apparently this is width, then height? -->
+}
+
+<!-- The two other possible values for background size are the keywords contain and cover.  -->
+
+<!-- background-size: contain;
+background-size: cover;
+
+The background-clip Property
+
+The background-clip property specifies the painting area of the background.
+
+The property takes three different values:
+
+border-box - (default) the background is painted to the outside edge of the border
+padding-box - the background is painted to the outside edge of the padding
+content-box - the background is painted within the content box -->
+
+<div id="first">padding-box - the background is painted to the outside edge of the padding</div>
+<div id="second">content-box - the background is painted within the content box</div>
+
+<style>
+#first {
+   border: 2px dotted black;
+   padding: 20px;
+   background: LightBlue;
+   background-clip: padding-box;
+}
+#second {
+   border: 2px dotted black;
+   padding: 20px;
+   background: LightBlue;
+   background-clip: content-box;
+}
+</style>
+
+<!-- background-clip also applies to background images.
+The CSS:
+div {
+   background-image: url("css-logo.png");
+   background-clip: content-box;
+} -->
+
+
+
+<!--
+Multiple Backgrounds Super-imposed
+In the example below, we have two background images: the first is a CSS logo (aligned to the bottom and right); the second is a coding image (aligned to the top-left corner).  -->
+
+<div class="multiple"></div>
+<style>
+div.multiple {
+  width: 800px;
+  height: 800px;
+
+  /*Multiple backgrounds can also be specified using the background: shorthand property.*/
+
+  background: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/1970_FIFA_World_Cup_logo.png") 90% 10% no-repeat,
+              url("https://upload.wikimedia.org/wikipedia/commons/4/4e/-BI--titanplatform_CI_vertical.png") 500px 150px no-repeat,
+              url("https://apod.nasa.gov/apod/image/0512/startrails_gemini_big.jpg") left top no-repeat;
+
+
+  /*background long-hand version:
+  background-image: url("https://www.sololearn.com/images/fb-story-icon.jpg"), url("https://apod.nasa.gov/apod/image/0512/startrails_gemini_big.jpg");
+  background-position: right bottom, left top;
+  background-repeat: no-repeat;*/
+}
+</style>
