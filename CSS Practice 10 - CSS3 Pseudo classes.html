@@ -1,0 +1,103 @@
+<div id="parent">
+   <p>First paragraph</p>
+   <p>Second paragraph</p>
+   <p>Third paragraph</p>
+   <p>Fourth paragraph</p>
+</div>
+
+<style>
+#parent p:first-child {
+   color: green;
+   text-decoration: underline;
+}
+#parent p:last-child {
+   color: blue;
+   text-decoration: underline;
+}
+
+/*To specify a background color for every <p> element that is the second child of its parent:*/
+p:nth-child(2) {
+    background: red;
+    color: pink;
+}
+</style>
+
+
+<!--
+Pseudo elements are used to select specific parts of an element.
+There are five pseudo elements in CSS, each starting with a double colon (::):
+
+::first-line - the first line of the text in a selector
+::first-letter - the first letter of the text in a selector
+::selection - selects the portion of an element that is selected by a user
+::before - inserts some content before an element
+::after - inserts some content after an element
+
+In the example below, the ::first-line pseudo element is used to style the first line of our text: -->
+p::first-line {
+   color: #589432;
+}
+
+
+<style>
+
+/*The ::selection pseudo element styles the text that would be selected/highlighted by the user:*/
+p::selection {
+   background: #544721;
+   color: rgb(95, 173, 230);
+}
+</style>
+
+
+<!--
+Using ::before and ::after pseudo elements allows us to add a wide variety of content to the page.
+
+In the example below, the ::before pseudo element is used to add an image before the list.
+The HTML: -->
+<p class="pseudo">You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+<p class="pseudo">You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+<p class="pseudo2">You can insert text, images, and other resources using <strong>:before </strong>pseudo element.</p>
+
+<style>
+p.pseudo::before {
+   content: url("http://www.itel.am/assets/ico/iconsForSocials/gl.png");
+}
+p.pseudo2::after {
+   content: url("http://www.itel.am/assets/ico/iconsForSocials/gl.png");
+
+   /*Inline elements can't be transformed, and pseudo elements are inline by default,
+   so you must apply  display: block or display: inline-block to transform them:*/
+
+   display: inline-block;
+   transform: rotate(180deg);
+}
+/*Note the content keyword in the syntax.*/
+</style>
+
+
+    <div class="container">
+        <p class="one">words</p><p class="two">words are long???</p><p class="three">words</p><p class="four">words</p>
+    </div>
+
+    <style>
+    p.one {
+      float:left;
+      image: url("http://www.itel.am/assets/ico/iconsForSocials/gl.png");
+      transform: rotate(180deg);
+    }
+    p.two {
+      float:right;
+      background-image: url("http://www.itel.am/assets/ico/iconsForSocials/gl.png");
+      transform: rotate(120deg);
+    }
+    p.three {
+      float:right;
+      background-image: url("http://www.itel.am/assets/ico/iconsForSocials/gl.png");
+      transform: rotate(90deg);
+    }
+    p.four {
+      float:right;
+      background-image: url("http://www.itel.am/assets/ico/iconsForSocials/gl.png");
+      transform: rotate(60deg);
+    }
+    </style>

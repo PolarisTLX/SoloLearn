@@ -1,0 +1,82 @@
+<!--
+Specific border radius values can be applied for the border-radius property in the following order: top-left, top-right, bottom-right, bottom-left.
+The value of border-radius can also be specified in percentages. -->
+
+<style>
+border-radius: 0 0 20px 20px;
+/*top-left, top-right, bottom right, bottom-left*/
+</style>
+
+<!--
+To create a circle, the border radius should be half of the height and the width.
+The rectangle in the example below has a width and height of 200px. By setting the border radius to 100px, the corners will be rounded to form a circle: -->
+
+div {
+   width: 200px;
+   height: 200px;
+   border-radius: 100px;
+   background-color: green;
+   color: white;
+}
+
+<!-- box-shadow property order is:
+- The horizontal offset then vertical offset then color.
+Optionally:  horizontal offset, vertical offset, blur, spread, color
+The blur and spread values should be used before the color value.-->
+
+div {
+   width: 300px;
+   height: 100px;
+   background-color: #9ACD32;
+   box-shadow: 10px 10px #888888;
+   <!-- X-offset, Y-offset then color -->
+
+   <!-- Optionally: -->
+   box-shadow: 10px 10px 5px 5px #888888;
+   <!-- X-offset, Y-offset, blur, spread, color -->
+}
+
+<!--
+Inner Shadow
+
+The "inset" keyword allows to draw an inner shadow in the box. To show an inset shadow, just add the inset keyword:
+
+box-shadow: inset 10px 10px 5px #888888;
+
+
+Layering Multiple Shadows
+You can simultaneously create inner and outer shadows by separating each shadow with a comma.
+In the example below, two inner shadows have been created by separating each shadow with a comma.
+
+box-shadow:
+inset 10px 10px 5px #888888,
+inset -10px -10px 5px #888888;
+
+
+In case we specify more than one value, the one which comes last will be positioned at the back of all shadows.
+Here is an example:
+
+box-shadow: 0 0 10px 4px #FF6347,
+0 0 10px 30px #FFDAB9,
+30px 0 20px 30px #B0E0E6;-->
+
+<!--
+Transparency:
+An RGBA color value is specified with:
+rgba(red, green, blue, alpha);
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque). -->
+
+
+
+<!-- The text-shadow Property: -->
+p {
+text-shadow: -25px 15px blue;
+<!-- X-offset, Y-offset, blur, color -->
+}
+
+<!-- To create multiple shadows, the shadows are separated with a comma. Here is an example: -->
+h1 {
+   text-shadow: 5px 10px 2px #93968f,
+               -3px 6px 5px #58d1e3;
+}
+<!-- To remove a text-shadow, set the text-shadow property to none -->
