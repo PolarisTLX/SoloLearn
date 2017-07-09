@@ -1,0 +1,85 @@
+<!-- CSS3 Transitions
+
+CSS3 transitions allow us to change from one property value to another over a given duration.
+Transition effects can be applied to a wide variety of CSS properties, including:
+
+background-color, width, height, opacity, and many more.
+
+transition-property - specifies the property to be transitioned
+transition-duration - specifies the duration over which transitions should occur
+transition-timing-function - specifies how the pace of the transition changes over its duration
+transition-delay - specifies a delay (in seconds) for the transition effect
+
+Example:  transition property = transform, duration = 5 seconds, timing function = "ease-in" that specifies a transition effect with a slow start.
+
+     {
+transition: transform 5s ease-in;
+} -->
+
+
+<!--
+div:hover   (hover mouse over object)
+div:active  (hold mouse down on object to progress transition)
+div:focus   (modifies a form field once a field is selected/clicked on)
+
+-->
+
+<div class="widen">Words are here to test this out.</div>
+
+<div class="extend">Words are ALSO here to test this out.</div>
+
+</br></br></br></br></br>
+</br></br></br></br></br>
+<div>
+  <label>Type your name</label>
+  <input type="text"></input>
+
+<style>
+
+div.widen {
+   float: left;
+   width: 50px;
+   height: 50px;
+   background: #32CD32;
+   transition: width 3s;
+}
+div.widen:hover {
+   width: 250px;
+}
+
+div.extend {
+   float: left;
+   width: 50px;
+   height: 50px;
+   background: #3246cd;
+   transition: height 3s;
+}
+div.extend:active {
+   height: 250px;
+}
+input {
+  width: 150px;
+  transition: width 3s;
+}
+input:focus{
+  width: 300px;
+}
+
+</style>
+
+
+<!--
+transition-timing-function
+
+The transition-timing-function property specifies the speed curve of the transition effect.
+It can have the following values:
+ease - the animation starts slowly, then accelerates quickly.
+ease-in - starts slowly, then accelerates, and stops abruptly.
+ease-out - starts quickly, but decelerates to a stop.
+ease-in-out - similar to ease, but with more subtle acceleration and deceleration.
+linear - constant speed throughout the animation; often best for color or opacity changes.
+
+Finally, we have cubic-bezier(), which allows you to define your own values in the cubic-bezier function. Possible values are numeric values from 0 to 1.
+transition-timing-function: cubic-bezier(0,0,1,1);
+
+If no timing function is specified, the default value is ease. -->
