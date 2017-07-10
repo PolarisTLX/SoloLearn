@@ -161,5 +161,142 @@ div.double2 {
    transform: scale(0.7,0.7) rotate(30deg);
    color:white;
 }
+/*transform: rotate(45deg) translate(100px);*/
 
-transform: rotate(45deg) translate(100px);
+</style>
+
+
+</br></br></br>
+</br></br></br>
+</br></br></br>
+
+3D TRANSFORMS - X, Y, Z Axis
+</br>
+rotateX(), rotateY(), rotateZ()
+<!--
+3D Transforms are quite similar to 2D Transforms: -->
+
+<div class="X">Rotate 150 deg X</div>
+<div class="Y180">Rotate 180 deg Y</div>
+</br>
+<div class="Y150">Rotate 150 deg Y</div>
+</br>
+<div class="Z180">Rotate 180 deg Z</div>
+</br></br>
+<div class="Z120">Rotate 120 deg Z</div>
+
+<style>
+div.X {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(226, 156, 36);
+  color:white;
+   transform: rotateX(150deg);
+}
+div.Y180 {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(226, 156, 36);
+  color:white;
+   transform: rotateY(180deg);
+}
+div.Y150 {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(226, 156, 36);
+  color:white;
+   transform: rotateY(150deg);
+}
+div.Z180 {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(226, 156, 36);
+  color:white;
+   transform: rotateZ(180deg);
+}
+div.Z120 {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(226, 156, 36);
+  color:white;
+   transform: rotateZ(120deg);
+}
+</style>
+
+<!-- You can switch off all transformations applied to an element
+ using the none function: transform: none; -->
+
+
+<!--
+3D Translations
+
+3D translate methods allow you to move the element using any CSS length units (px, em, %, etc.) :
+
+horizontally (translateX),
+vertically (translateY),
+and into or out of the screen (translateZ),
+Positive values moves the element toward the viewer, negative values away.
+
+
+The CSS:
+#mybox1 {
+   transform:
+     translateX(29px)
+     translateY(5em)
+     translateZ(-13px);
+}
+
+SHORTHAND:
+
+The translate3d() method allows us to pass the x, y, and z offsets, all at once and in the following order:
+
+#mybox1 {
+   transform: translate3d(29px, 5em, -13px);
+}
+ -->
+
+
+<!--
+ Like the translate3d() method, there are also scale3d() and rotate3d(),
+ which are applicable for scaling and rotating elements in 3D.
+
+Translation of an element is similar to relative positioning - it doesn't affect the document's flow.
+The translated element will keep its position in the flow and will only appear to have moved. -->
+
+
+</br></br></br>
+</br></br></br>
+</br></br></br>
+
+PESPECTIVE of 3D transformations - NOT WORKING!!!
+
+<!-- The perspective property ONLY affects 3D transformed elements! -->
+
+</br></br>
+<div class="empty-div"></div>
+<div class="green-div"></div>
+
+<style>
+div.empty-div {
+  width: 200px;
+  height: 100px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+   perspective: 100px;
+}
+div.green-div {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(119, 203, 85);
+   transform: rotateX(45deg);
+}
+</style>
+
+<!--
+Perspective defines how the depth of the 3D scene is rendered.
+Think of perspective as a distance from the viewer to the object.
+The greater the value, the further the distance, so the less intense the visual effect.
+
+When defining the perspective property for an element,
+it is the child elements that get the perspective view, not the element itself. -->

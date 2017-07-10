@@ -1,0 +1,158 @@
+<!-- CSS3 Animations
+
+The @keyframes Rule
+
+When you specify CSS styles inside the @keyframes rule,
+the animation will gradually change from the current style to the new style at certain times.
+
+The following example will change the background color of an element three times:
+when the animation is 50% complete, 70% complete, and when the animation is 100% complete. -->
+
+
+<!--
+@keyframes examplename {
+   0%  {background-color: red;}
+   50%  {background-color: yellow;}
+   70%  {background-color: blue;}
+   100% {background-color: green;}
+} -->
+
+
+<!--
+As an alternative to using percentages, you can use from and to keywords, where:
+"from" is a starting offset of 0%
+"to" is an ending offset of 100%.
+
+The two examples below are equivalent, and produce the same result: -->
+
+<!--
+@keyframes colorchange {
+   0% {background-color: red;}
+   100% {background-color: green;}
+} -->
+
+
+<!-- same as: -->
+
+<!--
+@keyframes colorchange {
+   from {background-color: red;}
+   to {background-color: green;}
+} -->
+
+
+
+<!-- Example: -->
+
+<div class="colorchange">This changes 3 colors after 2s delay and loops 5 times</div>
+<!-- If the animation-duration property is not specified, the animation will have no effect, because the default value is 0.
+If the animation name does not match any keyframe rule, the animation will not execute.
+
+div.whatever {
+  animation-name: colorchange;
+  =
+@keyframes colorchange {
+
+div.whatever {
+  animation-name: makeupname;
+  =
+@keyframes makeupname {
+   -->
+
+<style>
+div.colorchange {
+   width: 100px;
+   height: 100px;
+   background-color: red;
+   animation-name: colorchange;
+   animation-duration: 2s;
+   animation-delay: 2s;
+   animation-iteration-count: 5;
+}
+
+
+@keyframes colorchange {
+   0% {background-color: red;}
+   50% {background-color: green;}
+   100% {background-color: blue;}
+}
+</style>
+
+
+<!-- The animation-timing-function specifies the speed curve of an animation. It can have the following values:
+ease - specifies an animation with a slow start, then fast, then end slowly (this is default)
+linear - specifies an animation with the same speed from start to end
+ease-in - specifies an animation with a slow start
+ease-out - specifies an animation with a slow end
+ease-in-out - specifies an animation with a slow start and end
+cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+
+The CSS syntax looks like this:
+     {
+animation-timing-function: linear;
+}
+
+
+animation-delay - defines the delay before an animation starts. The CSS syntax looks like this:
+animation-delay: 2s;
+
+
+The animation-delay and animation-duration values can be defined in seconds (s) or milliseconds (ms). -->
+
+
+<!-- The animation-iteration-count property determines the number of times an animation repeats.
+For example, you can set the animation to run 5 times:
+
+    {
+animation-iteration-count: 5;
+}
+
+
+To make the animation repeat forever, just use the infinite value:
+
+     {
+animation-iteration-count: infinite;
+} -->
+
+
+<!--
+The animation-direction indicates how the keyframe should be applied.
+The values can be set as:
+
+normal - the default value, which means it plays forward from 0 % to 100%.
+reverse - plays the keyframe in an opposite direction from 100 % to 0%
+alternate - the animation first runs forward, then backward, then forward.
+alternate reverse - the animation first runs backward, then forward, then backward.
+
+    {
+animation-direction: alternate;
+}
+
+If you use 0 or a negative number for the animation-iteration-count, the animation will never start. -->
+
+
+<!--
+SORTHAND EXAMPLE:
+
+LONGHAND:
+div {
+   animation-name: colorchange;
+   animation-duration: 3s;
+   animation-timing-function: ease-in;
+   animation-delay: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: reverse;
+}
+
+
+SHORTHAND for the same result as the above code:
+div {
+   animation: colorchange 3s ease-in 1s infinite reverse;
+}
+
+This appears to be in this particular order:
+animation: -name  -duration  -timing-function  -delay  -iteration-count  -direction
+
+The order in which each property is declared in the shorthand declaration
+is important and cannot be altered, or the animation will not work properly.
+-->
