@@ -138,7 +138,28 @@ div.scale3 {
 </br></br></br>
 </br></br></br>
 
-Applying multiple transforms to an element is simple; just separate them using spaces.
+<!-- Applying multiple transforms to an element is simple; just separate them using spaces.
+If you use commas to separate the functions, none of the functions will be applied, so keep in mind not to use commas. -->
 
-Here's an example with two transforms defined:
+
+
+<div class="double1">original before tranforms</div> </br>
+<div class="double2">scale(0.7,0.7) rotate(30deg)</div> </br>
+
+<style>
+div.double1 {
+   width: 200px;
+   height: 100px;
+   background-color: #8BC34A;
+   color:white;
+}
+div.double2 {
+   /*margin: 60px;*/
+   width: 200px;
+   height: 100px;
+   background-color: #8bc34a;
+   transform: scale(0.7,0.7) rotate(30deg);
+   color:white;
+}
+
 transform: rotate(45deg) translate(100px);
